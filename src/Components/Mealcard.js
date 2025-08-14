@@ -11,7 +11,7 @@ function Mealcard({ detail }) {
         : detail.map((curItem) => {
             return (
               <div className="mealImg">
-                <img src={curItem.strMealThumb} />
+                <img src={curItem.strMealThumb} alt={curItem.strMeal} />
                 <p>{curItem.strMeal}</p>
                 <NavLink to={`/${curItem.idMeal}`}>
                   <button>Show Recipe</button>

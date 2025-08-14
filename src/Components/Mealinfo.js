@@ -23,7 +23,7 @@ function Mealinfo() {
        <h2>Data Not Found</h2>
       ) : (
         <div className="mealInfo">
-          <img src={info.strMealThumb} />
+          <img src={info.strMealThumb} alt={info.strMeal} />
           <div className="info">
             <h1>Recipe Detail</h1>
             <button>{info.strMeal}</button>
