@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
+import { SlMagnifier } from "react-icons/sl";
 import Mealcard from "./Mealcard";
 function Mainpage() {
   const [data, setdata] = useState();
@@ -33,8 +34,16 @@ function Mainpage() {
             type="text"
             placeholder="Enter Your Dish"
             onChange={handleInput}
+            value={search}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                myFun();
+              }
+            }}
           />
-          <button onClick={myFun}>Search</button>
+          <button onClick={myFun}>
+              <SlMagnifier />
+          </button>
         </div>
         <h2 className="msg">{msg}</h2>
         <div>
